@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    hello
+    <span th:text="${name}">mayun</span>
+    <span th:text="VIP+${name}">mayun</span>
+    <span th:text="|VIP,${name}|">mayun</span><br>
+
+    name:<span th:text="${teacher.name}">mayun</span>
+    age:<span th:text="${teacher.age}">25</span><br>
+    <input th:type="text" th:value="${teacher.name}">
+    <input th:type="text" th:name="name" th:value="${teacher.name}">
+    <table>
+        <tr>
+            <td>nameaa</td>
+            <td>age</td>
+            <td>status</td>
+        </tr>
+        <tr th:each="teacher : ${list}">
+            <td th:text="${teacher.id}">id</td>
+            <td th:text="${teacher.name}">name</td>
+            <td th:text="${teacher.age}">age</td>
+            <!--<td th:if="${teacher.age>35}" th:text="taolaol"></td>-->
+            <td th:text="${teacher.age>35}?'taolaol':'too young'"></td>
+        </tr>
+    </table>
+    <hr/>
+    <span th:text="${#dates.format(now,'yyyy-MM-dd hh:mm:ss')}"></span>
+    <span th:text="${#calendars.format(now,'yyyy-MM-dd')}"></span>
+    <a th:href="@{test}">aaaaa</a>
+
+
+    <form th:action="@{teacher}" th:method="post">
+        name:<input th:type="text" th:name="name" th:value="${teacher.name}"><br>
+        age:<input th:type="text" th:name="age" th:value="${teacher.age}">
+        <input type="submit" th:value="登录"/>
+    </form>
+</body>
+</html>
