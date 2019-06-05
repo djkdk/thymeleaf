@@ -26,7 +26,7 @@ public class ThymeleafController {
         List<Teacher> list=new ArrayList<>();
         list.add(new Teacher(2,"bb",23));
         list.add(new Teacher(3,"cc",36));
-        model.addAttribute("list",list);
+
 
 
         return "hello";
