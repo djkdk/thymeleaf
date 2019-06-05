@@ -28,7 +28,7 @@ public class ThymeleafController {
         list.add(new Teacher(3,"cc",36));
         model.addAttribute("list",list);
 
-        model.addAttribute("now",new Date());
+
         return "hello";
     }
 
