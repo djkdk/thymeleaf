@@ -31,16 +31,7 @@ public class ThymeleafController {
         model.addAttribute("now",new Date());
         return "hello";
     }
-    @RequestMapping("test")
-    public String test(){
-        return "h5";
-    }
 
-    @RequestMapping("teacher")
-    public String testlogin(Teacher teacher){
-        System.out.println(teacher.getAge()+teacher.getName());
-        return "h5";
-    }
 
 
 
