@@ -39,6 +39,7 @@ public class ThymeleafController {
     @RequestMapping("teacher")
     public String testlogin(Teacher teacher){
         System.out.println(teacher.getAge()+teacher.getName());
+        System.out.println(teacher.getAge()+teacher.getName());
         return "h5";
     }
 
